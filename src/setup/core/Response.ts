@@ -8,6 +8,7 @@ export enum StatusCode {
     NO_CONTENT = 204,
     BAD_REQUEST = 400,
     UNAUTHORIZED = 401,
+    FORBIDDEN = 403,
     NOT_FOUND = 404,
     PRECONDITION_FAILED = 412,
     I_AM_A_TEAPOT = 418,
@@ -20,7 +21,6 @@ export enum StatusCode {
 export enum ErrorCode {
     UNKNOWN = 'U001',
     SUCCESS = 'S001',
-    MYSQL_FOREIGN_KEY_RESTRICT = '1451',
     FAILURE = '10001',
     RETRY = '10002',
     API_ERROR = 'A001',

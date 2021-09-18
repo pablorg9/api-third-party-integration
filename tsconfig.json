@@ -21,7 +21,7 @@
         "strictFunctionTypes": true,
         "paths": {
             "@dao": ["dao"],
-            "@service": ["service"],
+            "@services": ["services"],
             "@dao/*": ["dao/*"],
             "@routers": ["routers"],
             "@setup": ["setup/index"],
