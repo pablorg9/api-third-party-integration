@@ -1,0 +1,14 @@
+src
+bd
+node_modules
+.DS_Store
+.git
+.gitignore
+tsconfig.json
+tsconfig.build.json
+commitlint.config.js
+.prettierrc.js
+.eslintrc.js
+.eslintignore
+.editorconfig
+deploy
