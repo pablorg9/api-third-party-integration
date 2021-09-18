@@ -20,12 +20,6 @@ export class BadRequestError extends ApiErrorResponse {
     }
 }
 
-export class BadRequestPubSubError extends ApiErrorResponse {
-    constructor(message: string) {
-        super(StatusCode.OK, ErrorCode.FAILURE, message);
-    }
-}
-
 export class UnkownError extends ApiErrorResponse {
     constructor(message: string) {
         super(StatusCode.INTERNAL_ERROR, ErrorCode.RETRY, message);
@@ -38,16 +32,8 @@ export class RuntimeError extends ApiErrorResponse {
     }
 }
 
-export class DaoError extends ApiErrorResponse {
-    constructor(code: number | string, message: string) {
-        switch (code) {
-            case 'ER_ROW_IS_REFERENCED_2':
-                super(StatusCode.INTERNAL_ERROR, ErrorCode.MYSQL_FOREIGN_KEY_RESTRICT, 'ER_ROW_IS_REFERENCED_2');
-                break;
-
-            default:
-                super(StatusCode.INTERNAL_ERROR, ErrorCode.RETRY, message);
-                break;
-        }
+export class HttpRequestError extends ApiErrorResponse {
+    constructor(status: number, message: string) {
+        super(status, ErrorCode.API_ERROR, message);
     }
 }

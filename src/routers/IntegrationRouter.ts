@@ -28,7 +28,7 @@ export class IntegrationRouter implements IRouter {
     }
 
     async getObject(req: Request, res: Response, _next: NextFunction): Promise<Response | void> {
-        const response = this.integrationService.getObject(req.params['imgName']);
+        const response = await this.integrationService.getObject(req.params['imgName']);
         return res.status(200).json(new SuccessOKResponse(response));
     }
 }
