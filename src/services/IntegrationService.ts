@@ -10,7 +10,7 @@ export class integrationService {
     private nasaDao = DEPENDENCY_CONTAINER.get<NasaDao>(NasaDao);
 
     async getObject(imgName: string): Promise<IJsonSchema> {
-        const ghipyObj = await this.ghipyDao.getImgUrl(imgName);
+        const ghipyObj = await this.ghipyDao.getImg(imgName);
         const nasaObj = await this.nasaDao.getNasaObject();
 
         const jsonSchema = this.populateObject(nasaObj, [], ghipyObj);
