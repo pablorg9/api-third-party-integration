@@ -7,32 +7,16 @@
 ├── node_modules
 ├── src
 │   ├── dao
-│   │   ├── infrastructure-interfaces
-│   │   ├── models
-│   │   ├── services
+│   │   ├── http
 │   ├── routers
-│   │   ├── models
-│   │   ├── services
 │   ├── services
-│   │   ├── api
-│   │   │   ├── routers
-│   │   ├── api-client (optional)
-│   │   │   ├── cm-api (optional)
-│   │   │   ├── proveedor-api (optional)
-│   │   ├── repositories (optional)
-│   │   │   ├── firestore (optional)
-│   │   │   ├── datastore (optional)
-│   │   │   ├── postgres (optional)
-│   │   │   ├── big-query (optional)
-│   │   ├── pubsub (optional)
 │   ├── setup
-│   │   ├── dependencies
-│   │   │   ├── DependencyContainer.ts
-│   │   ├── Swagger.ts
+│   │   ├── core
+│   │   ├── helpers
+│   │   ├── interfaces
+│   │   ├── middlewares
 ├── test
-│   │   ├── module
-│   │   │   ├── features
-│   │   │   ├── steps-definitions
+│   │   ├── mock
 ├── .editorconfig
 ├── .env
 ├── .eslintignore
