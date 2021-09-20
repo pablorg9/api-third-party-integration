@@ -1,14 +1,13 @@
 import 'reflect-metadata';
 import { injectable } from 'inversify';
 import { DEPENDENCY_CONTAINER } from '@setup';
-import { GiphyDao, NasaDao, MovieDao } from '@dao';
-import { IJsonSchema } from '@setup/interfaces';
+import { IGiphyDao, IJsonSchema, IMovieDao, INasaDao } from '@setup/interfaces';
 
 @injectable()
-export class integrationService {
-    private ghipyDao = DEPENDENCY_CONTAINER.get<GiphyDao>(GiphyDao);
-    private nasaDao = DEPENDENCY_CONTAINER.get<NasaDao>(NasaDao);
-    private movieDao = DEPENDENCY_CONTAINER.get<MovieDao>(MovieDao);
+export class IntegrationService {
+    private ghipyDao = DEPENDENCY_CONTAINER.get<IGiphyDao>('GiphyDao');
+    private nasaDao = DEPENDENCY_CONTAINER.get<INasaDao>('NasaDao');
+    private movieDao = DEPENDENCY_CONTAINER.get<IMovieDao>('MovieDao');
 
     async getObject(imgName: string): Promise<IJsonSchema> {
         const ghipyObj = await this.ghipyDao.getImg(imgName);

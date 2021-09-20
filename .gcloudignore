@@ -11,4 +11,5 @@ commitlint.config.js
 .eslintrc.js
 .eslintignore
 .editorconfig
+test
 deploy
