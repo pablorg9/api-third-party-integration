@@ -19,6 +19,7 @@
         "start": "node --require dotenv/config dist/Server.js",
         "start:debug": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk dist/Server.js\"",
         "app-deploy": "gcloud app deploy",
+        "semantic-release": "semantic-release --branches main",
         "pre-commit": "yarn lint && yarn test"
     },
     "dependencies": {
@@ -61,6 +62,7 @@
         "jest": "^27.2.0",
         "prettier": "^2.3.0",
         "rimraf": "^3.0.2",
+        "semantic-release": "^18.0.0",
         "ts-jest": "^27.0.5",
         "ts-node": "^9.1.1",
         "tsc-watch": "^4.2.9",
